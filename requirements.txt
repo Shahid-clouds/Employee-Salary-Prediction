@@ -1,3 +1,4 @@
+# Required Python packages for Employee Salary Prediction Streamlit App
 streamlit
 pandas
 matplotlib

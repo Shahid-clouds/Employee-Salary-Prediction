@@ -88,7 +88,7 @@ with tab1:
         company_size   = st.selectbox("Company Size", list(size_labels.keys()))
         remote         = st.selectbox("Remote Ratio", list(remote_labels.keys()))
 
-    if st.button("Predict Salary", use_width="stretch"):
+    if st.button("Predict Salary", use_container_width=True):
         exp_code  = ["EN","MI","SE","EX"][exp_labels[experience]]
         size_code = ["S","M","L"][size_labels[company_size]]
 
@@ -127,7 +127,7 @@ with tab2:
          "Selected": "✅ Best" if k == best_name else ""}
         for k, v in results.items()
     ])
-    st.dataframe(perf_df, use_width="stretch")
+    st.dataframe(perf_df, use_container_width=True)
 
     # R2 bar chart
     fig, ax = plt.subplots(figsize=(8, 4))
